@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --color-main: #2874f0;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial,sans-serif;
+}
+
+.nav {
+    background-color: var(--color-main);
+}
+
+.nav__content {
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 175px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav__left {
+    display: flex;
+}
+
+.nav__logo {
+    margin-right: 15px;
+}
+
+.nav__logo-image {
+    width: 75px;
+}
+
+.nav__logo-explore {
+    margin-top: -1px;
+    font-size: 11px;
+    font-style: italic;
+    color: white;
+
+}
+
+.nav__logo-plus {
+    margin-right: 2px;
+    color: #ffe500;
+    font-weight: 500;
+}
+
+
+.nav__search {
+    display: flex;
+    box-shadow: 1px 0px 5px #5f5f5f;
+}
+
+.nav__search-input {
+    width: 500px;
+}
+
+.nav__search-input input{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+
+.nav__search-btn {
+    border: none;
+    background: #fff;
+    height: 35px;
+    width: 44px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 4px 12px 0 8px;
+    margin-left: -1px;
+}
+
+.nav__right {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    gap: 50px;
+    margin-left: -100px;
+}
+
+.nav__login {
+    border: 1px solid #fff;
+    padding: 5px 40px;
+    font-size: 16px;
+    color: var(--color-main);
+    cursor: pointer;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+.nav__more {
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav__more-arrow {
+    margin: 1px 0 0 8px;
+    transform: rotate(-90deg);
+    transition: transform .1s ease-in-out;
+}
+
+.nav__more:hover .nav__more-arrow{
+    transform: rotate(90deg);
+}
+
+.nav__cart {
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1320px) {
+    .nav__search {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .nav__right {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 880px){
+    .nav__right {
+        margin-right: 20px;
+    }   
+}
