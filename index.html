@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shopping Site for Mobiles, Electronics, ...</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
+
+ 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootsrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -18,8 +25,8 @@
         <div class="nav__content">
                 <div class="nav__left">
                     <a class="nav__logo" href="/">
-                        <img class="nav__logo-image" src="images/logo.png" alt="brand-logo" />
-                        <div class="nav__logo-explore">Explore <span class="nav__logo-plus">Plus</span><img width="10px" src="images/plus.png"></div>
+                        <img class="nav__logo-image" src="images/icons/logo.png" alt="brand-logo" />
+                        <div class="nav__logo-explore">Explore <span class="nav__logo-plus">Plus</span><img width="10px" src="images/icons/plus.png"></div>
                     </a>
                 
                 <div class="nav__search">
@@ -40,10 +47,20 @@
                         <div class="nav__login">
                             Login
                         </div>
-                        <div class="nav__more">
+<!-- 
+                        <div class=" dropdown-hover">
+                        <div class="nav__more" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             More
                             <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="nav__more-arrow"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff"></path></svg>
                         </div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Notification Preference</a></li>
+                            <li><a class="dropdown-item" href="#">24x7 Customer Care</a></li>
+                            <li><a class="dropdown-item" href="#">Advertise</a></li>
+                            <li><a class="dropdown-item" href="#">Download App</a></li>
+                          </ul>
+                        </div> -->
+                        
                         <div class="nav__cart">
                             <svg width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg>
                             Cart
@@ -138,6 +155,36 @@
     <!-- Content -->
     <section class="content">
 
+
+        <!-- Carousel -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/carousel/image1.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel/image2.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel/image3.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel/image4.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel/images5.webp" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
         <!-- First row of content -->
         <div class="content--deals">
 
@@ -146,7 +193,7 @@
                 <div class="deals">
                     <h2 class="deals__heading">Deals of the Day</h2>
                     <h3 class="deals__timer">
-                        <img src="images/timer.png" alt="">
+                        <img src="images/icons/timer.png" alt="">
                         22:07:36 Left
                     </h3>
                     <button class="view-btn">VIEW ALL</button>
@@ -162,7 +209,7 @@
                                 <figcaption>Titan, Casio, Sonata...</figcaption>
                             </figure>
     
-                            <p class="product__discount">Upto 80%+Extra 10%Off</p>
+                            <p class="product__discount">Upto 80% Off</p>
     
                             <p class="product__desc">Knockout Deals!</p>
                         </div>
@@ -173,7 +220,7 @@
                                 <figcaption>Home Temples & more</figcaption>
                             </figure>
     
-                            <p class="product__discount">Extra 10%Off</p>
+                            <p class="product__discount">Extra 10% Off</p>
     
                             <p class="product__desc">Space Saving furniture</p>
                         </div>
@@ -184,7 +231,7 @@
                                 <figcaption>Premium Tablet Cases</figcaption>
                             </figure>
     
-                            <p class="product__discount">Extra 10% Off</p>
+                            <p class="product__discount">Extra 25% Off</p>
     
                             <p class="product__desc">For All Top Models</p>
                         </div>
@@ -196,7 +243,7 @@
                                 <figcaption>Nokia A-110</figcaption>
                             </figure>
     
-                            <p class="product__discount">Flat 14%Off + Bank Offer</p>
+                            <p class="product__discount">Flat 14%Off</p>
     
                             <p class="product__desc">Now only at $99</p>
                         </div>
@@ -204,12 +251,12 @@
                         <div class="product">
                             <figure>
                                 <img src="images/products/tshirt.webp" alt="TV">
-                                <figcaption>Metronaut, Provogue & ...</figcaption>
+                                <figcaption>Metronaut, Provo ...</figcaption>
                             </figure>
     
                             <p class="product__discount">Exta 10% Off</p>
     
-                            <p class="product__desc">Jackets, Dresses & More</p>
+                            <p class="product__desc">Jackets, Dresses..</p>
                         </div>
 
     
@@ -236,7 +283,7 @@
                         </div>
     
                         <div class="products__next-icon">
-                            <img src="images/next.png" alt="next" />
+                            <img src="images/icons/next.png" alt="next" />
                         </div>
     
 
@@ -347,5 +394,7 @@
 
     </section>
 
+
+    
 </body>
 </html>
