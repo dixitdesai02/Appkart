@@ -24,6 +24,9 @@ body {
     background-color: var(--color-main);
     position: sticky;
     justify-content: center;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 1px 1px rgb(197, 197, 197);
 }
 
 .nav__content {
@@ -80,10 +83,11 @@ a {
 }
 
 .nav__search-input input{
-    padding: 10px;
+    padding: 6px 10px;
     width: 100%;
     border: none;
     outline: none;
+    font-size: 1.5rem;
 }
 
 .nav__search-input input::placeholder{
@@ -98,7 +102,7 @@ a {
     width: 44px;
     border-radius: 2px;
     cursor: pointer;
-    padding: 4px 12px 0 8px;
+    padding: 4px 12px 2px 8px;
     margin-left: -1px;
 }
 
@@ -126,6 +130,7 @@ a {
     color: white;
     font-weight: 500;
     cursor: pointer;
+    position: relative;
 }
 
 .nav__more-arrow {
@@ -138,9 +143,9 @@ a {
     transform: rotate(90deg);
 }
 
-.dropdown-hover {
+.dropdown-more:hover .dropdown-menu {
     display: block;
-    opacity: 1;
+    margin-top: 0;
 }
 
 .nav__cart {
@@ -148,13 +153,27 @@ a {
     font-weight: 500;
     cursor: pointer;
 }
-/* 
+
+.menu__item:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+    /* position: absolute; */
+}
+
 .dropdown-menu {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     letter-spacing: 0.2pt;
     font-family: Roboto, Arial,sans-serif !important;  
-    font-weight: 500;
-} */
+    padding: 1rem 1.5rem;
+    line-height: 2.6rem;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.dropdown-menu li:hover a {
+    color: var(--color-main);
+    font-weight: 600;
+}
 
 @media only screen and (max-width: 1130px) {
     .nav__right {
@@ -192,22 +211,19 @@ a {
     padding: 0.8rem 0 1.5rem 0;
     background-color: #fff;
     box-shadow: 0px 0px 3px 0px rgb(95, 95, 95);
-    position: relative;
-    z-index: -1;
 }
 
 .menu__items {
     display: flex;
-    gap: 5rem;
+    column-gap: 5rem;
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
     font-weight: 500;
-    
 }
 
 .menu__item {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .menu__item img {
@@ -223,7 +239,7 @@ a {
 }
 
 .menu__item:hover {
-    color: var(--color-main)
+    color: var(--color-main);
 }
 
 .menu__item-arrow {
@@ -250,6 +266,7 @@ a {
 @media screen and (max-width: 980px) {
     .menu__items {
         flex-wrap: wrap;
+        row-gap: 0;
     }
 }
 
@@ -275,8 +292,9 @@ a {
     height: fit-content;
     padding: 1.5rem 0 0 0;
     position: relative;
-    overflow: hidden;
     box-shadow: 0px 1px 5px 0px lightgray;
+    width: 88%;
+    overflow: hidden;
 }
 
 .deals {
@@ -333,10 +351,10 @@ a {
     display: flex;
     gap: 4rem;
     justify-content: start;
-    padding-bottom: 1rem;
     margin-bottom: 1rem;
-    padding: 0 2rem 0.5rem 3rem;
+    padding: 0 0 0.5rem 3rem;
     margin: 1.1rem 0;
+    overflow: scroll;
 }
 
 .product {
@@ -344,18 +362,16 @@ a {
     cursor: pointer;
 }
 
-
-
 .product figure img {
     width: 155px;
     height: 185px;
     margin-bottom: 2rem;
     object-fit: contain;
-    transition: transform 0.1s ease-in;
+    transition: transform 0.1s ease-in-out;
 }
 
 .product img:hover {
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
 .product figure figcaption {
@@ -377,8 +393,8 @@ a {
 }
 
 .products__next-icon {
-    position: absolute;
-    right: 0;
+    position: sticky;
+    right: -2px;
     top: 10rem;
     background-color: #fff;
     border-radius: 3px;
@@ -451,6 +467,10 @@ a {
         width: 100%;
     }
 
+    .deals-container {
+        width: 100%;
+    }
+
     .content--instruments {
         width: 100%;
     }
@@ -465,6 +485,10 @@ a {
 @media screen and (max-width: 652px) {
     .advertisement {
         display: none;
+    }
+
+    .deals__heading {
+        font-size: 1.7rem;
     }
 
 }
